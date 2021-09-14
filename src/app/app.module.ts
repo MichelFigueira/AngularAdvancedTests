@@ -1,11 +1,10 @@
-import { ActionDirectiveModule } from './shared/directives/action/action.module';
-import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LikeWidgetModule } from './shared/components/like-widget/like-widget.module';
+import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { LikeWidgetModule } from './shared/components/like-widget/like-widget.mo
     BrowserModule,
     AppRoutingModule,
     LikeWidgetModule,
-    PhotoFrameModule,
-    ActionDirectiveModule
+    PhotoFrameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

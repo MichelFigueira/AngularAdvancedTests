@@ -44,11 +44,13 @@ describe(LikeWidgetComponent.name, () => {
     component.liked.subscribe(() => {
       component.likes++;
       fixture.detectChanges();
-      const counterEl: HTMLElement = fixture.nativeElement.querySelector('.like-counter');
+      const counterEl: HTMLElement = fixture.nativeElement
+        .querySelector('.like-counter');
       expect(counterEl.textContent.trim()).toBe('1');
       done();
     });
-    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement.querySelector('.like-widget-container');
+    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement
+      .querySelector('.like-widget-container');
     likeWidgetContainerEl.click();
   });
 
@@ -57,12 +59,15 @@ describe(LikeWidgetComponent.name, () => {
     component.liked.subscribe(() => {
       component.likes++;
       fixture.detectChanges();
-      const counterEl: HTMLElement = fixture.nativeElement.querySelector('.like-counter');
+      const counterEl: HTMLElement = fixture.nativeElement
+        .querySelector('.like-counter');
       expect(counterEl.textContent.trim()).toBe('1');
       done();
     });
-    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement.querySelector('.like-widget-container');
-    const event = new KeyboardEvent('keyup', {key: 'Enter'});
+
+    const likeWidgetContainerEl: HTMLElement = fixture.nativeElement
+      .querySelector('.like-widget-container');
+    const event = new KeyboardEvent('keyup', { key: 'Enter' });
     likeWidgetContainerEl.dispatchEvent(event);
   });
 });
