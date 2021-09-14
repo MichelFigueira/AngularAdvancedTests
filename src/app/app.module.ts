@@ -1,3 +1,4 @@
+import { ActionDirectiveModule } from './shared/directives/action/action.module';
 import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { LikeWidgetModule } from './shared/components/like-widget/like-widget.mo
     BrowserModule,
     AppRoutingModule,
     LikeWidgetModule,
-    PhotoFrameModule
+    PhotoFrameModule,
+    ActionDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
